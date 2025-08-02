@@ -15,10 +15,14 @@ if not api_key:
     api_key = st.text_input("Enter your Gemini API key:", type="password")
 if api_key:
     genai.configure(api_key=api_key)
-
+# --- Page Configuration ---
+st.set_page_config(
+    page_title="My App",
+    page_icon="📝" # Use an emoji here
+)
 # --- Page Setup ---
-st.set_page_config(page_title="📝 AI-Powered Question Paper Generator", layout="wide")
-st.title("📝 AI-Powered Question Paper Generator")
+st.set_page_config(page_title="Question Paper Generator", layout="wide")
+st.title("📝 Question Paper Generator")
 st.markdown("""
 Generate custom multiple-choice question papers using Google Gemini. Select, reorder, and download questions with an answer key.
 """)
